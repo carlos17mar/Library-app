@@ -1,2 +1,2 @@
 # Library-app
-A book saver app that help you keep track of the books you have red
+An app that tracks of the books you have red
