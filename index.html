@@ -23,10 +23,26 @@
          
 <div id="popup">
   <div id="popup-content">
-    <h1>Hello</h1>
-    <p>Introduce the info on the book you want to save</p>
-    <input></input>
+    <h4>Introduce the info on the book you want to save</h4>
+    <div class="row">
+    <div class="column1">
+        <p>Title</p>
+        <input type="text" name="Title" id="newTitle">
+        <br>
+        <br>
+        <br>
+        <input type="checkbox" name="read" id="readed">
+        <label for="readed">Have you read it?</label>
 
+    </div>
+    <div class="column2">
+        <p>Author</p>
+        <input type="text" name="Author" id="newAuthor">
+        <p>Number of pages</p>
+        <input type="number" name="newpages" id="newPages">
+    </div>
+</div>
+    <button>Apply</button>
 </div>
 </div>
            
@@ -38,19 +54,13 @@
           <button id="delete">Delete</button>
           <br/>
           <button id="about">About</button>
-          <button disabled="disabled">test</button>
 
 
         </div>
 
         
         <div class="bookTable">
-           <div class="modal" id="displayNew">
-            <div class="modal-content">
-              <span class="close-button">&times;</span>
-              <h1>Hello</h1>
-            </div>
-            </div>
+           
           <table>
             <tbody>
               <tr id="head">

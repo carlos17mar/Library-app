@@ -1,5 +1,9 @@
+html{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
 body {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 h1 {
   color: rgb(255, 255, 255);
@@ -120,14 +124,26 @@ button:hover {
 }
 
 #popup-content {
-  width: 500px;
+  width: 450px;
   flex-direction:column;
-  height: 400px;
+  height: 315px;
   background:white;
   border-radius:5px;
   display:flex;
-  justify-content:center;
   align-items:center;
+
 }
+
+.row{
+  display: flex;
+}
+.column1{
+  margin-right: 20px;
+  flex: 50%;
+}
+.column2{
+  flex: 50%;
+}
+
 
 
