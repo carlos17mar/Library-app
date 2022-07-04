@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-       
-        <div class="create">
-
-            <div class="cabeza">
-            <div class="header">
-                <h1>Library</h1>
-            </div></div>
-        <div class="container">
-            <div class="books">
-                <button id="newBook">New Book</button>
-                <br>
-                <button id="delete">Delete</button>
-                <br>
-                <button id="about">About</button>
-                <button disabled="disabled">test</button>
-                 
-            </div>
-            
-
-                <div class="bookTable">
-                      <table>
-                    <tbody>
-                    <tr id="head">
-                    <td>Title</td>
-                    <td>Author</td>
-                    <td>Pages</td>
-                    <td>Read</td>
-                      </tr>
-                      <tr>
-                        <td>The Hobbit</td>
-                        <td>Tolkien</td>
-                        <td>222</td>
-                        <td><input type="checkbox"></td>
-                        </tr>
-                    </tbody>
-                    </table>
-                </div>
-
-              <footer>
-            <h3>holas</h3>
-        </footer>
-            </div>
-         
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="create">
+      <div class="cabeza">
+        <div class="header">
+          <h1>Library</h1>
         </div>
-       
+      </div>
+      <div class="container">
+        <div class="books">
+          <button class ='myBtn' id="myBtn">New Book</button>
+
+
+         
+<div id="popup">
+  <div id="popup-content">
+    <h1>Hello</h1>
+    <p>Introduce the info on the book you want to save</p>
+    <input></input>
+
+</div>
+</div>
+           
+
+         
+
+
+          <br/>
+          <button id="delete">Delete</button>
+          <br/>
+          <button id="about">About</button>
+          <button disabled="disabled">test</button>
+
+
+        </div>
+
         
-        <script src="script.js" async defer></script>
-    </body>
+        <div class="bookTable">
+           <div class="modal" id="displayNew">
+            <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <h1>Hello</h1>
+            </div>
+            </div>
+          <table>
+            <tbody>
+              <tr id="head">
+                <td>Title</td>
+                <td>Author</td>
+                <td>Pages</td>
+                <td>Read</td>
+              </tr>
+              <tr>
+                <td>The Hobbit</td>
+                <td>Tolkien</td>
+                <td>222</td>
+                <td><input type="checkbox" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" async defer></script>
+  </body>
 </html>
