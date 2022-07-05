@@ -34,36 +34,35 @@ document
 
 //Creador dinamico de entrdas en la tabla con objetos de tipo libro.
 
-//function introTable (_Book){
-let title = theHobbit.title;
+function introTable(_Book) {
 
-//Creamos una fila
+  //Creamos una fila
 
-const bookTable = document.getElementById("table");
-const addRow = document.createElement("tr");
-bookTable.appendChild(addRow);
-//Añadimos el nombre.
-const addTitle = document.createElement("td");
-addTitle.innerHTML = theHobbit.title;
-bookTable.appendChild(addTitle);
-// Añadimos el autor
-const addAuthor = document.createElement("td");
-addAuthor.innerHTML = theHobbit.author;
-bookTable.appendChild(addAuthor);
-// Añadimos el numero de paginas
-const addPages = document.createElement("td");
-addPages.innerHTML = theHobbit.pages;
-bookTable.appendChild(addPages);
-// Añadimos el check-box de si se a leido
-const rowIsRead = document.createElement('td');
-const createCheckBox = document.createElement('input');
-createCheckBox.setAttribute('type','checkbox');
+  const bookTable = document.getElementById("table");
+  const addRow = document.createElement("tr");
+  bookTable.appendChild(addRow);
+  //Añadimos el nombre.
+  const addTitle = document.createElement("td");
+  addTitle.innerHTML = _Book.title;
+  bookTable.appendChild(addTitle);
+  // Añadimos el autor
+  const addAuthor = document.createElement("td");
+  addAuthor.innerHTML = _Book.author;
+  bookTable.appendChild(addAuthor);
+  // Añadimos el numero de paginas
+  const addPages = document.createElement("td");
+  addPages.innerHTML = _Book.pages;
+  bookTable.appendChild(addPages);
+  // Añadimos el check-box de si se a leido
+  const rowIsRead = document.createElement("td");
+  const createCheckBox = document.createElement("input");
+  createCheckBox.setAttribute("type", "checkbox");
 
-if (theHobbit.isRead) {
-    createCheckBox.setAttribute('checked','true');
-
+  if (_Book.isRead) {
+    createCheckBox.setAttribute("checked", "true");
+  }
+  rowIsRead.appendChild(createCheckBox);
+  bookTable.appendChild(rowIsRead);
 }
-rowIsRead.appendChild(createCheckBox);
-bookTable.appendChild(rowIsRead);
 
-//  }
+//introTable(theHobbit);
