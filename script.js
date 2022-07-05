@@ -3,6 +3,7 @@ let inputTitle = "";
 let inputAuthor = "";
 let inputPages = 0;
 let inputRead = Boolean(false);
+let numInputs = 0;
 
 class Book {
   constructor(title, author, pages, isRead) {
@@ -14,12 +15,7 @@ class Book {
 }
 //Se me ocurre, crear un objeto base e ir almacenandolos en el array.
 let theHobbit = new Book("The hobbit", "J.R.R.Tolkien", 255, false);
-console.log(theHobbit.author);
-myLibrary[0] = theHobbit;
-console.log(myLibrary[0]);
-theHobbit = new Book("The hola", "J.R.R.Tolkien", 255, true);
-console.log(theHobbit.title);
-
+let auxBook= new Book("The hobbiaasdt", "J.R.R.Tolkien", 255, false);
 //Creador de pop-up
 
 document
@@ -35,9 +31,7 @@ document
 //Creador dinamico de entrdas en la tabla con objetos de tipo libro.
 
 function introTable(_Book) {
-
   //Creamos una fila
-
   const bookTable = document.getElementById("table");
   const addRow = document.createElement("tr");
   bookTable.appendChild(addRow);
@@ -64,5 +58,22 @@ function introTable(_Book) {
   rowIsRead.appendChild(createCheckBox);
   bookTable.appendChild(rowIsRead);
 }
+//Añadimos una entrada a la tabla
+introTable(theHobbit);
+//Funcion que almacena todos los objetos creados en el array
+function saveBook(_Book){
+    myLibrary[numInputs]=_Book;
+    numInputs++;
+}
 
-//introTable(theHobbit);
+//Se crea la funcion de crear objetos mediante un input del usuario y se añaden a la tabla.
+document
+    .getElementById('createNewEntry')
+    .addEventListener('click',(_) =>{
+        console.log("golas");
+        saveBook(theHobbit);
+        saveBook(auxBook);
+        console.log(myLibrary[0]);
+        console.log(myLibrary[1]);
+    })
+    

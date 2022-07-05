@@ -17,50 +17,39 @@
       </div>
       <div class="container">
         <div class="books">
-          <button class ='newBook' id="newBook">New Book</button>
+          <button class="newBook" id="newBook">New Book</button>
 
+          <div id="popup">
+            <div id="popup-content">
+              <h4>Introduce the info on the book you want to save</h4>
+              <div class="row">
+                <div class="column1">
+                  <p>Title</p>
+                  <input type="text" name="Title" id="newTitle" />
+                  <br />
+                  <br />
+                  <br />
+                  <input type="checkbox" name="read" id="readed" />
+                  <label for="readed">Have you read it?</label>
+                </div>
+                <div class="column2">
+                  <p>Author</p>
+                  <input type="text" name="Author" id="newAuthor" />
+                  <p>Number of pages</p>
+                  <input type="number" name="newpages" id="newPages" />
+                </div>
+              </div>
+              <button id = "createNewEntry">Apply</button>
+            </div>
+          </div>
 
-         
-<div id="popup">
-  <div id="popup-content">
-    <h4>Introduce the info on the book you want to save</h4>
-    <div class="row">
-    <div class="column1">
-        <p>Title</p>
-        <input type="text" name="Title" id="newTitle">
-        <br>
-        <br>
-        <br>
-        <input type="checkbox" name="read" id="readed">
-        <label for="readed">Have you read it?</label>
-
-    </div>
-    <div class="column2">
-        <p>Author</p>
-        <input type="text" name="Author" id="newAuthor">
-        <p>Number of pages</p>
-        <input type="number" name="newpages" id="newPages">
-    </div>
-</div>
-    <button>Apply</button>
-</div>
-</div>
-           
-
-         
-
-
-          <br/>
+          <br />
           <button id="delete">Delete</button>
-          <br/>
+          <br />
           <button id="about">About</button>
-
-
         </div>
 
-        
         <div class="bookTable">
-           
           <table>
             <tbody id="table">
               <tr id="head">
@@ -68,12 +57,6 @@
                 <td>Author</td>
                 <td>Pages</td>
                 <td>Read</td>
-              </tr>
-              <tr>
-                <td>The Hobbit</td>
-                <td>Tolkien</td>
-                <td>222</td>
-                <td><input type="checkbox" /></td>
               </tr>
             </tbody>
           </table>
