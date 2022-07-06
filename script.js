@@ -51,6 +51,14 @@ function introTable(_Book) {
   const rowIsRead = document.createElement("td");
   const createCheckBox = document.createElement("input");
   createCheckBox.setAttribute("type", "checkbox");
+//Pruebas 
+  const hola = document.createElement("td");
+  const caracola = document.createElement("button");
+  
+  hola.appendChild(caracola);
+  bookTable.appendChild(hola);
+
+
 
   if (_Book.isRead) {
     createCheckBox.setAttribute("checked", "true");
