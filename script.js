@@ -51,20 +51,19 @@ function introTable(_Book) {
   const rowIsRead = document.createElement("td");
   const createCheckBox = document.createElement("input");
   createCheckBox.setAttribute("type", "checkbox");
-//Pruebas 
-  const hola = document.createElement("td");
-  const caracola = document.createElement("button");
-  
-  hola.appendChild(caracola);
-  bookTable.appendChild(hola);
-
-
-
   if (_Book.isRead) {
     createCheckBox.setAttribute("checked", "true");
   }
   rowIsRead.appendChild(createCheckBox);
   bookTable.appendChild(rowIsRead);
+  const deleteRow = document.createElement("td");
+  const deleteButton = document.createElement("button");
+  deleteButton.innerHTML= 'x';
+  deleteButton.setAttribute('id',numInputs);
+  console.log(deleteButton);
+  deleteRow.appendChild(deleteButton);
+  bookTable.appendChild(deleteRow);
+
 }
 //Añadimos una entrada a la tabla
 introTable(theHobbit);
@@ -99,3 +98,6 @@ document
 
         });
     
+ //Para implementar el boton de delete hay que hacer que el display de libros se haga de forma que lea
+ //los libros del array y cada vez que se modifique algo se imprima el array actualizado. 
+        
