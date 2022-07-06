@@ -65,15 +65,23 @@ function saveBook(_Book){
     myLibrary[numInputs]=_Book;
     numInputs++;
 }
-
-//Se crea la funcion de crear objetos mediante un input del usuario y se añaden a la tabla.
+    //Setea el atributo que a introducido el usuario al objeto auxiliar.
+function getAttribute(id){
+    const input = document.getElementById(id);
+    let text =  input.value;
+    return text;
+}
+//Crea objetos mediante un input del usuario y se añaden a la tabla.
 document
     .getElementById('createNewEntry')
     .addEventListener('click',(_) =>{
-        console.log("golas");
-        saveBook(theHobbit);
-        saveBook(auxBook);
-        console.log(myLibrary[0]);
-        console.log(myLibrary[1]);
-    })
+            auxBook.title = getAttribute('title');
+            auxBook.author = getAttribute('author');
+            auxBook.isRead = getAttribute('isRead');
+            auxBook.pages = getAttribute('pages');
+            saveBook(auxBook);
+            introTable(auxBook);
+            console.log(auxBook)
+
+        })
     
