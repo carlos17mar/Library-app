@@ -63,7 +63,6 @@ introTable(theHobbit);
 //Funcion que almacena todos los objetos creados en el array
 function saveBook(_Book){
     myLibrary[numInputs]=_Book;
-    numInputs++;
 }
     //Setea el atributo que a introducido el usuario al objeto auxiliar.
 function getAttribute(id){
@@ -79,9 +78,16 @@ document
             auxBook.author = getAttribute('author');
             auxBook.isRead = getAttribute('isRead');
             auxBook.pages = getAttribute('pages');
-            saveBook(auxBook);
-            introTable(auxBook);
-            console.log(auxBook)
+          
+           
+            if (getAttribute('title').length===0||getAttribute('author').length===0||getAttribute('pages')===0) {
+               alert("You have to enter all the information asked")
+            }else{
+                saveBook(auxBook);
+                introTable(myLibrary[numInputs]);
+                numInputs++;
+    
+            }
 
-        })
+        });
     
